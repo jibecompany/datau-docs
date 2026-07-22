@@ -41,14 +41,18 @@
   color: var(--md-default-fg-color--light);
 }
 
-/* Keep the logo's original colours in light mode; the wordmark is dark,
-   so invert it to white only in dark mode where the header is dark. */
+/* Keep the logo's original colours in both light and dark mode. */
 .md-header__button.md-logo img {
-  height: 1.5rem;
+  height: 2rem;
   width: auto;
 }
-[data-md-color-scheme="slate"] .md-header__button.md-logo img {
-  filter: brightness(0) invert(1);
+/* In dark mode the header is dark, so give the dark wordmark a light
+   backing pill to stay legible without changing the logo's colours. */
+[data-md-color-scheme="slate"] .md-header__button.md-logo {
+  padding: 0.2rem 0.5rem;
+  margin: 0.2rem 0;
+  background-color: #ffffff;
+  border-radius: 0.4rem;
 }
 
 /* Logo already spells "DataU" — hide the redundant site-name text,
