@@ -43,7 +43,7 @@
 
 /* Keep the logo's original colours in both light and dark mode. */
 .md-header__button.md-logo img {
-  height: 2rem;
+  height: 1.5rem;
   width: auto;
 }
 /* In dark mode the header is dark, so give the dark wordmark a light
@@ -82,6 +82,15 @@
 .dx-hero {
   padding: 5rem 0 4.5rem;
   text-align: center;
+}
+
+/* Logo in the hero — white, to read on the coloured gradient */
+.dx-hero__logo {
+  display: block;
+  height: 3.2rem;
+  width: auto;
+  margin: 0 auto 1.6rem;
+  filter: brightness(0) invert(1);
 }
 
 .dx-hero__badge {
