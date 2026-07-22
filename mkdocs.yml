@@ -1,0 +1,81 @@
+site_name: DataU Documentation
+site_description: User & developer documentation for the DataU platform and SPOON tools.
+site_url: https://cosminularu.github.io/public-docs/
+site_author: Jibe Company
+
+theme:
+  name: material
+  icon:
+    logo: material/shield-account
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - End Users:
+      - data-subjects/index.md
+      - DashboardU User Guide: data-subjects/dashboardu.md
+      - Connected Apps:
+          - data-subjects/connected-apps/index.md
+          - SPOON Project:
+              - data-subjects/connected-apps/spoon/index.md
+              - SPOON Dashboard: data-subjects/connected-apps/spoon/spoon-dashboard.md
+              - Questionnaire Tool: data-subjects/connected-apps/spoon/questionnaire-tool.md
+              - Data Lake: data-subjects/connected-apps/spoon/data-lake.md
+              - Personal Data Wallet: data-subjects/connected-apps/spoon/personal-data-wallet.md
+  - Developers:
+      - developers/index.md
+      - ProxyU Java SDK:
+          - developers/proxyu-java-sdk/index.md
+          - Getting Started: developers/proxyu-java-sdk/getting-started.md
+          - SDK Capabilities: developers/proxyu-java-sdk/capabilities.md
+          - Demo Application: developers/proxyu-java-sdk/demo-app.md
+          - Troubleshooting: developers/proxyu-java-sdk/troubleshooting.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CosminUlaru/public-docs
+
+copyright: EU-funded · SPOON Project · Jibe Company BV
