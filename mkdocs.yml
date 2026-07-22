@@ -8,9 +8,9 @@ theme:
   icon:
     logo: material/shield-account
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.indexes
+    - navigation.expand
     - navigation.top
     - navigation.footer
     - content.code.copy
@@ -47,35 +47,30 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - search
 
 nav:
-  - Home: index.md
-  - End Users:
-      - data-subjects/index.md
-      - DashboardU User Guide: data-subjects/dashboardu.md
-      - Connected Apps:
-          - data-subjects/connected-apps/index.md
-          - SPOON Project:
-              - data-subjects/connected-apps/spoon/index.md
-              - SPOON Dashboard: data-subjects/connected-apps/spoon/spoon-dashboard.md
-              - Questionnaire Tool: data-subjects/connected-apps/spoon/questionnaire-tool.md
-              - Data Lake: data-subjects/connected-apps/spoon/data-lake.md
-              - Personal Data Wallet: data-subjects/connected-apps/spoon/personal-data-wallet.md
-  - Developers:
-      - developers/index.md
-      - ProxyU Java SDK:
-          - developers/proxyu-java-sdk/index.md
-          - Getting Started: developers/proxyu-java-sdk/getting-started.md
-          - SDK Capabilities: developers/proxyu-java-sdk/capabilities.md
-          - Demo Application: developers/proxyu-java-sdk/demo-app.md
-          - Troubleshooting: developers/proxyu-java-sdk/troubleshooting.md
+  - DataU:
+      - index.md
+      - User Guide (Data Subject):
+          - DashboardU User Guide: data-subjects/dashboardu.md
+      - Developer Guide (Data Processor):
+          - developers/index.md
+          - ProxyU Client Guide:
+              - developers/proxyu-java-sdk/index.md
+              - Getting Started: developers/proxyu-java-sdk/getting-started.md
+              - SDK Capabilities: developers/proxyu-java-sdk/capabilities.md
+              - Demo Application: developers/proxyu-java-sdk/demo-app.md
+              - Troubleshooting: developers/proxyu-java-sdk/troubleshooting.md
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/CosminUlaru/public-docs
 
-copyright: EU-funded · SPOON Project · Jibe Company BV
+copyright: © Jibe Company BV

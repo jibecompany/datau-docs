@@ -1,9 +1,9 @@
 # DashboardU User Guide
 
 **DashboardU** (the DataU Dashboard) at [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud)
-is your control centre for monitoring how your data is shared across the SPOON platform. It is
-powered by **DataU**, the data-sovereignty layer that handles identity, authentication, consent, and
-data governance for every SPOON tool.
+is your control centre for monitoring how your data is shared. It is powered by **DataU**, the
+data-sovereignty layer that handles identity, authentication, consent, and data governance for every
+connected tool.
 
 ## Authentication & single sign-on
 
@@ -13,14 +13,14 @@ your credentials.
 
 ### Logging in
 
-1. Click **Continue with DataU** or **Log in** on any SPOON tool.
+1. Click **Continue with DataU** or **Log in** on any connected tool.
 2. You are redirected to `auth.datau.jibe.cloud`.
 3. Enter your credentials and sign in.
 4. You are redirected back — now authenticated across all tools simultaneously.
 
 ### Registering a new account
 
-1. On the SPOON Dashboard landing page, click **Register**.
+1. On any DataU app's landing page, click **Register**.
 2. Complete the DataU registration form.
 3. Verify your email address.
 4. Log in with your new credentials.
@@ -54,15 +54,13 @@ Your DataU account determines which tools you can access.
 
 === "Citizen / User"
 
-    - Access to the **Personal Data Wallet** and **DashboardU**.
     - Create and manage personal data items across all categories.
     - Control consent for each data item before sharing.
-    - Monitor what data has been shared with which organisations.
+    - Monitor what data has been shared with which organisations via DashboardU.
 
 === "Researcher / Admin"
 
-    - Access to the **Questionnaire Tool** and **Data Lake**.
-    - Create, publish, and analyse questionnaires.
+    - Create, publish, and analyse data-collection instruments.
     - Upload and browse anonymised datasets.
     - Sees only anonymised, token-based data — never real personal information.
 
@@ -81,6 +79,5 @@ is used:
   each item.
 - **Anonymisation** — identifiers such as names and addresses are replaced with anonymised tokens
   before storage.
-- **GDPR compliance** — the platform is designed to meet EU data-protection regulations.
-- **EU-funded** — SPOON is an EU-funded research project, subject to European data-governance
-  standards.
+- **GDPR compliance** — the platform is designed to meet EU data-protection regulations and
+  European data-governance standards.

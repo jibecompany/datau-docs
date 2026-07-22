@@ -1,55 +1,50 @@
-# DataU Documentation
+# DataU
 
-Welcome to the documentation for the **DataU platform** and the **SPOON toolset** — a suite of
-EU-funded digital tools developed by **Jibe Company BV** under Work Package 2 of the
-[SPOON](https://www.spoon-he.eu/) Horizon Europe project (Grant Agreement 101182299).
+**DataU** is a **data-sovereignty platform**. Its founding principle is simple: **people own their
+data**. Personal data stays under the individual's control at all times — stored on their behalf,
+shared only with explicit consent, and anonymised before it reaches any organisation that processes
+it.
 
-DataU is the **data-sovereignty infrastructure** behind SPOON. Its founding principle is simple:
-**citizens own their data**. Personal data stays under the citizen's control at all times — stored
-in their Personal Data Wallet, shared only with explicit consent, and anonymised before it reaches
-any research team.
+DataU provides the identity, authentication, consent, and data-governance layer that applications
+build on. A unified identity layer (Keycloak / OpenID Connect) gives users a single sign-on across
+every connected tool, so they authenticate once and move freely between applications.
 
-## Choose your path
+!!! info "More coming soon"
+    This is the general overview of DataU. More platform documentation will be added here over time.
+
+## Documentation
 
 <div class="grid cards" markdown>
 
--   :material-account-heart: **End Users / Data Subjects**
+-   :material-account-heart: **User Guide (Data Subject)**
 
     ---
 
-    You participate in SPOON studies and want to control your data. Learn how to use **DashboardU**
-    and the connected SPOON apps — the SPOON Dashboard, Questionnaire Tool, Data Lake, and Personal
-    Data Wallet.
+    For people who want to control their own data. Learn how to use **DashboardU** — your control
+    centre for signing in, seeing who you've shared data with, and managing consent.
 
-    [:octicons-arrow-right-24: Go to the user guides](data-subjects/index.md)
+    [:octicons-arrow-right-24: DashboardU User Guide](data-subjects/dashboardu.md)
 
--   :material-code-braces: **Developers / Data Processors**
+-   :material-code-braces: **Developer Guide (Data Processor)**
 
     ---
 
-    You are building an application on top of DataU and need to request and receive data from data
-    subjects. Learn how to integrate the **ProxyU Java client (SDK)**, generate correlation and
-    permission messages, and run the demo app.
+    For developers building applications on top of DataU. Learn how to integrate the **ProxyU
+    client**, correlate with data subjects, and request data with consent.
 
-    [:octicons-arrow-right-24: Go to the developer guides](developers/index.md)
+    [:octicons-arrow-right-24: ProxyU Client Guide](developers/index.md)
 
 </div>
 
-## The DataU platform at a glance
+## Data governance principles
 
-| Tool | URL | Role |
-| --- | --- | --- |
-| **SPOON Dashboard** | home.datau.jibe.cloud | Single entry point for all users |
-| **Questionnaire Tool** | forms.datau.jibe.cloud | Study design & survey authoring (researchers) |
-| **Data Lake** | lake.datau.jibe.cloud | Anonymised dataset storage & exploration |
-| **Personal Data Wallet** | wallet.datau.jibe.cloud | Citizen-controlled personal data store |
-| **DataU Dashboard (DashboardU)** | dashboardu.datau.jibe.cloud | Citizen view of shared data & consent |
-| **Authentication** | auth.datau.jibe.cloud | Keycloak / OpenID Connect single sign-on |
+DataU is built on a small set of inalienable principles:
 
-!!! info "Data governance principles"
-    - **Citizen ownership** — data subjects keep full GDPR rights over their personal data.
-      Consent is a lawful basis for processing only, never a transfer of ownership.
-    - **Partner content ownership** — partners own the questionnaires and datasets they author;
-      Jibe hosts that content under an operational licence.
-    - **Platform ownership** — all DataU software and infrastructure is Jibe-owned, and remains so
-      after the SPOON project ends.
+- **Individual ownership** — data subjects keep full GDPR rights over their personal data. Consent
+  is a lawful basis for processing only, never a transfer of ownership.
+- **Consent-based sharing** — data is shared only with explicit consent, given at the moment each
+  data item is saved.
+- **Anonymisation** — personal identifiers (such as names and addresses) are replaced with
+  anonymised tokens before storage. Processors never see the real values.
+- **GDPR compliance** — the platform implements GDPR-rooted controls: access, rectification,
+  erasure, and portability.
