@@ -1,0 +1,243 @@
+/* ============================================================
+   Header logo
+   ============================================================ */
+
+/* The logo is a dark wordmark; render it white on the coloured header. */
+.md-header__button.md-logo img {
+  filter: brightness(0) invert(1);
+  height: 1.4rem;
+  width: auto;
+}
+
+/* Logo already spells "DataU" — hide the redundant site-name text,
+   but keep the current page title that appears on scroll. */
+.md-header__title .md-header__topic:first-child {
+  display: none;
+}
+
+/* ============================================================
+   DataU landing page (home.html)
+   ============================================================ */
+
+/* Shared centered container, matching Material's content width */
+.dx-grid {
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ---- Hero ---------------------------------------------------- */
+.dx-hero,
+.dx-cta {
+  background: linear-gradient(
+    135deg,
+    var(--md-primary-fg-color),
+    var(--md-primary-fg-color--dark)
+  );
+  color: var(--md-primary-bg-color);
+}
+
+.dx-hero {
+  padding: 5rem 0 4.5rem;
+  text-align: center;
+}
+
+.dx-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 1.4rem;
+  border: 1px solid currentColor;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.dx-hero__badge svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.dx-hero h1 {
+  margin: 0 0 1rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.12;
+  color: inherit;
+}
+
+.dx-hero p {
+  max-width: 40rem;
+  margin: 0 auto 1.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+.dx-hero__buttons {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons on the coloured bands: invert for contrast */
+.dx-hero .md-button,
+.dx-cta .md-button {
+  color: var(--md-primary-bg-color);
+  border-color: var(--md-primary-bg-color);
+}
+.dx-hero .md-button--primary,
+.dx-cta .md-button--primary {
+  background-color: var(--md-primary-bg-color);
+  color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-bg-color);
+}
+.dx-hero .md-button--primary:hover,
+.dx-hero .md-button:hover,
+.dx-cta .md-button--primary:hover,
+.dx-cta .md-button:hover {
+  background-color: transparent;
+  color: var(--md-primary-bg-color);
+  border-color: var(--md-primary-bg-color);
+}
+
+/* ---- Bands --------------------------------------------------- */
+.dx-band {
+  padding: 4rem 0;
+}
+.dx-band--alt {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+.dx-band__title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.dx-band__lead {
+  max-width: 36rem;
+  margin: 0.5rem auto 2.6rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---- Feature grid ------------------------------------------- */
+.dx-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.6rem;
+}
+.dx-feature__icon svg {
+  width: 2.1rem;
+  height: 2.1rem;
+  fill: var(--md-primary-fg-color);
+}
+.dx-feature h3 {
+  margin: 0.7rem 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.dx-feature p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---- Audience cards ----------------------------------------- */
+.dx-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.6rem;
+}
+.dx-card {
+  display: block;
+  padding: 2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  background-color: var(--md-default-bg-color);
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.dx-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.12);
+}
+.dx-card__icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--md-primary-fg-color);
+}
+.dx-card h3 {
+  margin: 0.8rem 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.dx-card h3 span {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+.dx-card p {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+}
+.dx-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+.dx-card__cta svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+}
+
+/* ---- Final CTA ---------------------------------------------- */
+.dx-cta {
+  padding: 3.2rem 0;
+}
+.dx-cta__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.dx-cta h2 {
+  margin: 0 0 0.3rem;
+  color: inherit;
+  font-size: 1.6rem;
+}
+.dx-cta p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ---- Responsive --------------------------------------------- */
+@media screen and (max-width: 44.9375em) {
+  .dx-hero h1 {
+    font-size: 2.1rem;
+  }
+  .dx-cta__grid {
+    justify-content: center;
+    text-align: center;
+  }
+}

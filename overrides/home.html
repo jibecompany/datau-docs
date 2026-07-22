@@ -1,0 +1,114 @@
+{% extends "main.html" %}
+
+<!--
+  Custom scrollable landing page for DataU.
+  The hero and feature sections live here (not in index.md) so they can be
+  full-bleed, like the Material for MkDocs home page. Edit the copy below to
+  change the landing content; visual styling lives in docs/stylesheets/extra.css.
+-->
+
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Hero -->
+  <section class="dx-hero">
+    <div class="dx-grid dx-hero__grid">
+      <div class="dx-hero__content">
+        <div class="dx-hero__badge">{% include ".icons/material/shield-account.svg" %} Data sovereignty platform</div>
+        <h1>Your data. Your rules.</h1>
+        <p>
+          DataU puts people in control of their personal data. It is shared only
+          with explicit consent, stays under the individual's control at all times,
+          and gives developers a clean, consent-first way to build on top of it.
+        </p>
+        <div class="dx-hero__buttons md-typeset">
+          <a href="{{ 'getting-started/' | url }}" class="md-button md-button--primary">Get started</a>
+          <a href="{{ 'developers/' | url }}" class="md-button">Developer guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="dx-band">
+    <div class="dx-grid">
+      <h2 class="dx-band__title">Built on data sovereignty</h2>
+      <p class="dx-band__lead">A small set of inalienable principles underpins everything DataU does.</p>
+      <div class="dx-features">
+        <div class="dx-feature">
+          <div class="dx-feature__icon">{% include ".icons/material/account-heart.svg" %}</div>
+          <h3>Individual ownership</h3>
+          <p>Data subjects keep full GDPR rights over their personal data. Consent is a lawful basis for processing only — never a transfer of ownership.</p>
+        </div>
+        <div class="dx-feature">
+          <div class="dx-feature__icon">{% include ".icons/material/check-decagram.svg" %}</div>
+          <h3>Consent-based sharing</h3>
+          <p>Nothing is shared without explicit consent, given at the moment each data item is saved. No silent background collection.</p>
+        </div>
+        <div class="dx-feature">
+          <div class="dx-feature__icon">{% include ".icons/material/scale-balance.svg" %}</div>
+          <h3>GDPR-rooted controls</h3>
+          <p>Access, rectification, erasure, and portability are first-class — built into the platform, not bolted on.</p>
+        </div>
+        <div class="dx-feature">
+          <div class="dx-feature__icon">{% include ".icons/material/key-variant.svg" %}</div>
+          <h3>Single sign-on</h3>
+          <p>One identity (Keycloak / OpenID Connect) works across every connected tool, so users authenticate once and move freely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two audiences -->
+  <section class="dx-band dx-band--alt">
+    <div class="dx-grid">
+      <h2 class="dx-band__title">Two ways in</h2>
+      <p class="dx-band__lead">Whether you use DataU or build on it, start here.</p>
+      <div class="dx-cards">
+        <a class="dx-card" href="{{ 'data-subjects/dashboardu/' | url }}">
+          <div class="dx-card__icon">{% include ".icons/material/account-heart.svg" %}</div>
+          <h3>User Guide <span>Data Subject</span></h3>
+          <p>Use <strong>DashboardU</strong> to sign in, see who you've shared data with, and manage consent.</p>
+          <span class="dx-card__cta">DashboardU User Guide {% include ".icons/material/arrow-right.svg" %}</span>
+        </a>
+        <a class="dx-card" href="{{ 'developers/' | url }}">
+          <div class="dx-card__icon">{% include ".icons/material/code-braces.svg" %}</div>
+          <h3>Developer Guide <span>Data Processor</span></h3>
+          <p>Integrate the <strong>ProxyU client</strong>, correlate with data subjects, and request data with consent.</p>
+          <span class="dx-card__cta">ProxyU Client Guide {% include ".icons/material/arrow-right.svg" %}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="dx-band dx-cta">
+    <div class="dx-grid dx-cta__grid md-typeset">
+      <div>
+        <h2>Ready to dive in?</h2>
+        <p>Head to the guides and pick the path that fits you.</p>
+      </div>
+      <a href="{{ 'getting-started/' | url }}" class="md-button md-button--primary">Get started</a>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+<!-- Landing footer: copyright + social only, no prev/next nav -->
+{% block footer %}
+  <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-copyright">
+          {% if config.copyright %}
+            <div class="md-copyright__highlight">{{ config.copyright }}</div>
+          {% endif %}
+        </div>
+        {% if config.extra.social %}
+          {% include "partials/social.html" %}
+        {% endif %}
+      </div>
+    </div>
+  </footer>
+{% endblock %}

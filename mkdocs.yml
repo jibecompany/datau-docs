@@ -5,8 +5,9 @@ site_author: Jibe Company
 
 theme:
   name: material
-  icon:
-    logo: material/shield-account
+  custom_dir: overrides
+  logo: assets/datau-logo.png
+  favicon: assets/datau-logo.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -53,6 +54,9 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
