@@ -57,6 +57,7 @@ plugins:
 nav:
   - Home: index.md
   - Getting Started:
+      - Overview: getting-started.md
       - User Guide (Data Subject):
           - DashboardU User Guide: data-subjects/dashboardu.md
       - Developer Guide (Data Processor):
