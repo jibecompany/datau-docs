@@ -61,8 +61,7 @@ Your DataU account determines which tools you can access.
 === "Researcher / Admin"
 
     - Create, publish, and analyse data-collection instruments.
-    - Upload and browse anonymised datasets.
-    - Sees only anonymised, token-based data — never real personal information.
+    - Upload and browse study datasets.
 
 !!! tip "The decode link"
     When a connected app asks to correlate with you or requests permission for a data item, you'll
@@ -77,7 +76,5 @@ is used:
 
 - **Consent-based collection** — data is shared only with your explicit consent, given when you save
   each item.
-- **Anonymisation** — identifiers such as names and addresses are replaced with anonymised tokens
-  before storage.
 - **GDPR compliance** — the platform is designed to meet EU data-protection regulations and
   European data-governance standards.

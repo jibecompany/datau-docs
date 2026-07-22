@@ -1,4 +1,4 @@
-site_name: DataU Documentation
+site_name: DataU
 site_description: User & developer documentation for the DataU platform and SPOON tools.
 site_url: https://cosminularu.github.io/public-docs/
 site_author: Jibe Company
@@ -8,9 +8,10 @@ theme:
   icon:
     logo: material/shield-account
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
-    - navigation.expand
     - navigation.top
     - navigation.footer
     - content.code.copy
@@ -55,8 +56,9 @@ plugins:
   - search
 
 nav:
-  - DataU:
-      - index.md
+  - Home: index.md
+  - Getting Started:
+      - getting-started.md
       - User Guide (Data Subject):
           - DashboardU User Guide: data-subjects/dashboardu.md
       - Developer Guide (Data Processor):
