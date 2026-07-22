@@ -44,7 +44,7 @@
 /* Header uses the wordmark logo (dark text). Keep its original colours;
    in dark mode the header is dark, so back it with a fitted white pill. */
 .md-header__button.md-logo img {
-  height: 1.5rem;
+  height: 1.2rem;
   width: auto;
 }
 [data-md-color-scheme="slate"] .md-header__button.md-logo {
@@ -88,7 +88,7 @@
    centred horizontally on the coloured gradient */
 .dx-hero__logo {
   display: block;
-  height: 3.6rem;
+  height: 4.6rem;
   width: auto;
   margin: 0 auto 1.8rem;
   padding: 0.35rem 0.6rem;
