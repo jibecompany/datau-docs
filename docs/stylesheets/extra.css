@@ -41,17 +41,16 @@
   color: var(--md-default-fg-color--light);
 }
 
-/* Keep the logo's original colours in both light and dark mode. */
+/* Header uses the wordmark logo (dark text). Keep its original colours;
+   in dark mode the header is dark, so back it with a fitted white pill. */
 .md-header__button.md-logo img {
   height: 1.5rem;
   width: auto;
 }
-/* In dark mode the header is dark, so give the dark wordmark a light
-   backing pill to stay legible without changing the logo's colours. */
 [data-md-color-scheme="slate"] .md-header__button.md-logo {
   display: inline-flex;
   align-items: center;
-  padding: 0.15rem 0.3rem;
+  padding: 0.15rem 0.35rem;
   background-color: #ffffff;
   border-radius: 0.3rem;
 }
@@ -89,10 +88,10 @@
    centred horizontally on the coloured gradient */
 .dx-hero__logo {
   display: inline-block;
-  height: 4rem;
+  height: 2.6rem;
   width: auto;
   margin-bottom: 1.8rem;
-  padding: 0.55rem 0.9rem;
+  padding: 0.7rem 1rem;
   background-color: #ffffff;
   border-radius: 0.6rem;
 }
