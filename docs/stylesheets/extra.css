@@ -254,13 +254,14 @@
 .dx-card__cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  font-weight: 600;
+  gap: 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--md-primary-fg-color);
 }
 .dx-card__cta svg {
-  width: 0.95rem;
-  height: 0.95rem;
+  width: 1.15rem;
+  height: 1.15rem;
   fill: currentColor;
 }
 
