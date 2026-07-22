@@ -1,12 +1,54 @@
 /* ============================================================
-   Header logo
+   Brand palette (derived from the DataU logo)
+     text/gray  #444444
+     shield blue #2c5e8f  ->  teal #16708e
    ============================================================ */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: #1d6a8e;
+  --md-primary-fg-color--light: #2c5e8f;
+  --md-primary-fg-color--dark: #14536e;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+}
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #2c5e8f;
+  --md-accent-fg-color--transparent: rgba(44, 94, 143, 0.1);
+}
+/* Lighter teal for links on dark backgrounds */
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #4aa3c7;
+}
 
-/* The logo is a dark wordmark; render it white on the coloured header. */
+/* ============================================================
+   Header — light, so the original (colour) logo is legible
+   ============================================================ */
+.md-header,
+.md-tabs {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.md-header {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Search field styled for a light header */
+.md-search__input {
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+}
+.md-search__input::placeholder,
+.md-search__icon {
+  color: var(--md-default-fg-color--light);
+}
+
+/* Keep the logo's original colours in light mode; the wordmark is dark,
+   so invert it to white only in dark mode where the header is dark. */
 .md-header__button.md-logo img {
-  filter: brightness(0) invert(1);
-  height: 1.4rem;
+  height: 1.5rem;
   width: auto;
+}
+[data-md-color-scheme="slate"] .md-header__button.md-logo img {
+  filter: brightness(0) invert(1);
 }
 
 /* Logo already spells "DataU" — hide the redundant site-name text,
@@ -29,12 +71,8 @@
 /* ---- Hero ---------------------------------------------------- */
 .dx-hero,
 .dx-cta {
-  background: linear-gradient(
-    135deg,
-    var(--md-primary-fg-color),
-    var(--md-primary-fg-color--dark)
-  );
-  color: var(--md-primary-bg-color);
+  background: linear-gradient(135deg, #2c5e8f 0%, #1d6a8e 55%, #16708e 100%);
+  color: #ffffff;
 }
 
 .dx-hero {
