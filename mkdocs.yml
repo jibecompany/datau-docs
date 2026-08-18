@@ -64,6 +64,14 @@ nav:
       - Overview: getting-started.md
       - User Guide (Data Subject):
           - DashboardU User Guide: data-subjects/dashboardu.md
+      - Connected Apps:
+          - data-subjects/connected-apps/index.md
+          - SPOON Project:
+              - data-subjects/connected-apps/spoon/index.md
+              - SPOON Dashboard: data-subjects/connected-apps/spoon/spoon-dashboard.md
+              - Questionnaire Tool: data-subjects/connected-apps/spoon/questionnaire-tool.md
+              - Data Lake: data-subjects/connected-apps/spoon/data-lake.md
+              - Personal Data Wallet: data-subjects/connected-apps/spoon/personal-data-wallet.md
       - Developer Guide (Data Processor):
           - developers/index.md
           - ProxyU Client Guide:

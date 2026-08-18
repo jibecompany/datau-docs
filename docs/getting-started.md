@@ -9,7 +9,7 @@ DataU has two audiences. Pick the guide that matches what you want to do.
     ---
 
     For people who want to control their own data. Learn how to use **DashboardU** — your control
-    centre for signing in, seeing who you've shared data with, and managing consent.
+    centre for seeing and managing your shared data.
 
     [:octicons-arrow-right-24: DashboardU User Guide](data-subjects/dashboardu.md)
 

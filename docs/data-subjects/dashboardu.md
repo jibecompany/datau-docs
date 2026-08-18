@@ -25,28 +25,26 @@ your credentials.
 3. Verify your email address.
 4. Log in with your new credentials.
 
-## My Shared Data
+### DashboardU has two sections in the bottom navigation bar.
 
-DashboardU has two sections in the bottom navigation bar.
-
-### My Data
+#### My Data
 
 Shows all organisations you have shared data with. Use the **Search organisation** field to filter.
 Each entry shows *what* data was shared and *when*. It displays **"No data"** when no sharing has
 occurred yet.
 
-!!! note "Figure — My Data view showing no shared data yet"
-    *Screenshot to be added.*
+!!! note "My Data view showing 3 applications where data was shared"
+    ![My Data view showing no shared data yet](../assets/dashboardu-my-data.png)
 
-### My Settings
+#### My Settings
 
 - **Language** — change the display language.
 - **Terms and conditions** — view the platform T&Cs.
 - **Help** — access support documentation.
 - **Log out** — sign out of DataU.
 
-!!! note "Figure — My Settings with language, terms, help and logout options"
-    *Screenshot to be added.*
+!!! note "My Settings with language, terms, help and logout options"
+    ![My Settings with language, terms, help and logout options](../assets/dashboardu-my-settings.png)
 
 ## Roles & permissions
 
@@ -63,11 +61,34 @@ Your DataU account determines which tools you can access.
     - Create, publish, and analyse data-collection instruments.
     - Upload and browse study datasets.
 
-!!! tip "The decode link"
-    When a connected app asks to correlate with you or requests permission for a data item, you'll
-    open a link that lands in DashboardU (at `/#/decode?message=...`). DashboardU decodes the
-    request and lets you approve or deny it. This is the citizen side of the developer
-    [correlation & permission flow](../developers/proxyu-java-sdk/capabilities.md).
+## Sharing Data
+
+!!! tip "Step 1: Correlation"
+    When a connected app asks to correlate (link) with you, you'll
+    open a link that will redirect you to DashboardU. DashboardU decodes the
+    request and allows you to connect to the new app. 
+    This step needs to be done only once per application (Data Processor).
+
+<div class="grid" markdown>
+
+![Data Processor App showing correlation link](../assets/dp-correlation-link.png)
+
+![DashboardU decoding the correlation request](../assets/dashboardu-correlation.png)
+
+</div>
+
+!!! tip "Step 2: Permission"
+    After correlating (linking) with a Data Processor, the connected app can request a permission for some data from you.
+    You'll open a link that lands in DashboardU. DashboardU decodes the
+    request and lets you approve or deny it.
+
+<div class="grid" markdown>
+
+![Data Processor App showing permission link](../assets/dp-permission.png)
+
+![DashboardU decoding the permission request](../assets/dashboardu-permission.png)
+
+</div>
 
 ## Privacy & data sovereignty
 
