@@ -43,8 +43,11 @@ additional information.
     - **Questionnaire Tool** — create and manage food-habits surveys (forms.datau.jibe.cloud)
     - **Spoon Data Lake** — explore anonymised study datasets (lake.datau.jibe.cloud)
 
-!!! note "Figure — SPOON Dashboard showing available tool cards"
-    *Screenshot to be added.*
+!!! note "Figure 1.1 — SPOON Dashboard (researcher account) showing Questionnaire Tool and Data Lake"
+    ![SPOON Dashboard, researcher account](../../assets/spoon-dashboard-researcher.png)
+
+!!! note "Figure 1.2 — SPOON Dashboard (citizen account) showing all four available tools"
+    ![SPOON Dashboard, citizen account](../../assets/spoon-dashboard-citizen.png)
 
 ## User profile & account
 

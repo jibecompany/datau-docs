@@ -67,16 +67,6 @@ is a layered platform stack that all consortium partners use to run studies, col
 surface results. Jibe owns all DataU software components; partners own their questionnaires and
 datasets; data subjects retain inalienable GDPR rights over their personal data.
 
-Its core components are:
-
-- **SPOON Dashboard** — single entry point for all users (researchers and citizens)
-- **Questionnaire Generator** — study design and instrument authoring tool for researchers
-- **DataLake** — central storage and access layer (v1.0 completed March 2026)
-- **Personal Data Wallet** — citizen-facing data control layer implementing GDPR-rooted controls
-- **DataU Dashboard** — citizen-facing view onto a participant's own contributed and derived data
-- **SDK** — partner integration kit for connecting external systems to the SPOON platform
-- **ProxyU** — integration bridge to adjacent EU data ecosystems (DjustConnect, FoodDataQuest)
-
 ## Data governance principles
 
 SPOON's data governance is built on three inalienable principles, reflecting the EU's data

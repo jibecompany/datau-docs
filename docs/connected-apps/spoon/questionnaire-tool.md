@@ -20,6 +20,9 @@ analysis.
     Citizens who open the Questionnaire Tool from their account see only the questionnaires they have
     responded to. The view is **read-only** and shows no creation options.
 
+!!! note "Figure 2.2 — Questionnaire Tool (citizen view) showing no responded questionnaires yet"
+    ![Questionnaire Tool, citizen view](../../assets/questionnaire-citizen.png)
+
 ## Managing questionnaires
 
 The home page lists all questionnaires. Each card displays:
@@ -34,6 +37,9 @@ The home page lists all questionnaires. Each card displays:
 - **View** — preview the questionnaire as respondents see it
 - **Duplicate** — copy it as a new starting point
 - **Responses** — view all submissions and export as CSV
+
+!!! note "Figure 2.1 — Questionnaire Tool home (researcher) showing questionnaire cards with status, questions count and responses"
+    ![Questionnaire Tool home, researcher](../../assets/questionnaire-home.png)
 
 ## Building a questionnaire
 
@@ -61,6 +67,9 @@ Question** button.
 Questions marked with **\*** are required. Status changes to **Published** once the questionnaire is
 shared.
 
+!!! note "Figure 2.3 — Questionnaire Builder with title, description fields and Create a new Question button"
+    ![Questionnaire Builder](../../assets/questionnaire-builder.png)
+
 ## Viewing & exporting responses
 
 Open **Responses** on any questionnaire to see all submissions. Each response shows:
@@ -71,6 +80,9 @@ Open **Responses** on any questionnaire to see all submissions. Each response sh
 
 Click **Export CSV** (top-right) to download all responses as a spreadsheet for external analysis or
 upload to the Data Lake.
+
+!!! note "Figure 2.4 — Responses page showing individual submissions with timestamp, respondent email and all answers"
+    ![Questionnaire responses page](../../assets/questionnaire-responses.png)
 
 ## Sidebar
 

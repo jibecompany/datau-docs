@@ -37,10 +37,16 @@ The Datasets page lists all uploaded files in a sortable table with columns:
 Sort columns by clicking the column headers. Click the back arrow (**←**) to return to the datasets
 list from a detail view.
 
+!!! note "Figure 3.1 — Data Lake datasets list with sortable columns and Upload CSV button"
+    ![Data Lake datasets list](../../assets/data-lake-datasets.png)
+
 ### Naming convention
 
 Datasets follow the pattern **`StudyName_YYMM`** — e.g. `Demographics_2104` = April 2024 demographics
 dataset. Consistent naming makes datasets easy to identify at a glance.
+
+!!! note "Figure 3.2 — Dataset detail view showing anonymised Planning Persona data (Planning_1_2110)"
+    ![Data Lake dataset detail view](../../assets/data-lake-detail.png)
 
 ## Uploading a dataset
 
