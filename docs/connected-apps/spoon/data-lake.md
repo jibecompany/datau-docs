@@ -15,7 +15,8 @@ and downstream analysis — a clean, structured, privacy-safe environment for br
 The Data Lake operates under **partition-by-purpose** access rules: data is only accessible to
 authorised parties for the specific purposes for which it was collected. All personally identifiable
 information is automatically anonymised before storage, preserving analytical value while remaining
-GDPR-compliant.
+GDPR-compliant. Current datasets include studies from multiple European cities such as Thessaloniki,
+covering topics like demographics, food planning, and digital toolset usage.
 
 ## Getting started
 
