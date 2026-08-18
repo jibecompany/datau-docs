@@ -17,7 +17,7 @@ identity (name, age, address) to detailed food-behaviour attributes (planning pe
 habits, food-label attitudes, dietary preferences, sustainability factors).
 
 You can connect the wallet to the SPOON Dashboard and other apps, and at any point review what data
-you have shared and with whom via [DashboardU](../../dashboardu.md).
+you have shared and with whom via [DashboardU](../../data-subjects/dashboardu.md).
 
 ## Getting started
 

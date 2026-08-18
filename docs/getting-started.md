@@ -20,6 +20,6 @@ DataU has two audiences. Pick the guide that matches what you want to do.
     For developers building applications on top of DataU. Learn how to integrate the **ProxyU
     client**, correlate with data subjects, and request data with consent.
 
-    [:octicons-arrow-right-24: ProxyU Client Guide](developers/index.md)
+    [:octicons-arrow-right-24: ProxyU Client Guide](data-processors/index.md)
 
 </div>

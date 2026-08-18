@@ -65,21 +65,21 @@ nav:
       - User Guide (Data Subject):
           - DashboardU User Guide: data-subjects/dashboardu.md
       - Connected Apps:
-          - data-subjects/connected-apps/index.md
+          - connected-apps/index.md
           - SPOON Project:
-              - data-subjects/connected-apps/spoon/index.md
-              - SPOON Dashboard: data-subjects/connected-apps/spoon/spoon-dashboard.md
-              - Questionnaire Tool: data-subjects/connected-apps/spoon/questionnaire-tool.md
-              - Data Lake: data-subjects/connected-apps/spoon/data-lake.md
-              - Personal Data Wallet: data-subjects/connected-apps/spoon/personal-data-wallet.md
+              - connected-apps/spoon/index.md
+              - SPOON Dashboard: connected-apps/spoon/spoon-dashboard.md
+              - Questionnaire Tool: connected-apps/spoon/questionnaire-tool.md
+              - Data Lake: connected-apps/spoon/data-lake.md
+              - Personal Data Wallet: connected-apps/spoon/personal-data-wallet.md
       - Developer Guide (Data Processor):
-          - developers/index.md
+          - data-processors/index.md
           - ProxyU Client Guide:
-              - developers/proxyu-java-sdk/index.md
-              - Getting Started: developers/proxyu-java-sdk/getting-started.md
-              - SDK Capabilities: developers/proxyu-java-sdk/capabilities.md
-              - Demo Application: developers/proxyu-java-sdk/demo-app.md
-              - Troubleshooting: developers/proxyu-java-sdk/troubleshooting.md
+              - data-processors/proxyu-java-sdk/index.md
+              - Getting Started: data-processors/proxyu-java-sdk/getting-started.md
+              - SDK Capabilities: data-processors/proxyu-java-sdk/capabilities.md
+              - Demo Application: data-processors/proxyu-java-sdk/demo-app.md
+              - Troubleshooting: data-processors/proxyu-java-sdk/troubleshooting.md
 
 extra:
   social:
