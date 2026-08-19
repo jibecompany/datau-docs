@@ -27,7 +27,7 @@ you have shared and with whom via [DashboardU](../../data-subjects/dashboardu.md
 3. The home screen shows **Welcome, [Name]!** and a list of your current data items.
 4. If no items exist yet, click **+ Create a new Data Item** to add your first one.
 
-!!! note "Figure 4.1 — Personal Data Wallet home screen showing wallet link prompt"
+!!! note "Figure 3.1 — Personal Data Wallet home screen showing wallet link prompt"
     ![Personal Data Wallet home screen](../../assets/wallet-home.png)
 
 ## Creating a data item
@@ -38,7 +38,7 @@ Click **+ Create a new Data Item** to open the creation form with three fields:
 - **Category** — classify the data: `IDENTITY`, `CONTACT`, `FINANCIAL`, `HEALTH`, or `MISC`.
 - **Value** — enter the actual data value in the text area.
 
-!!! note "Figure 4.2 — Create a new Data Item form with Title, Category, and Value fields"
+!!! note "Figure 3.2 — Create a new Data Item form with Title, Category, and Value fields"
     ![Create a new Data Item form](../../assets/wallet-create-item.png)
 
 !!! warning "Consent is mandatory"

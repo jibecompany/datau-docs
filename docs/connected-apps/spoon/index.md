@@ -30,8 +30,8 @@ governed by consent and data sovereignty.
 | --- | --- | --- | --- |
 | **SPOON Dashboard** | home.datau.jibe.cloud | v0.0.5 | Single entry point for all users |
 | **Questionnaire Tool** | forms.datau.jibe.cloud | v0.0.18 | Create / answer food-habits surveys |
-| **Data Lake** | lake.datau.jibe.cloud | v0.0.7 | Explore anonymised study datasets |
 | **Personal Data Wallet** | wallet.datau.jibe.cloud | v0.0.9 | Store & share your personal data |
+| **Data Lake** | lake.datau.jibe.cloud | v0.0.7 | Explore anonymised study datasets |
 
 <div class="grid cards" markdown>
 
@@ -40,11 +40,11 @@ governed by consent and data sovereignty.
 
 -   :material-clipboard-list: **[Questionnaire Tool](questionnaire-tool.md)** — design, publish, and
     respond to food-habits questionnaires.
+  
+- :material-wallet: **[Personal Data Wallet](personal-data-wallet.md)** — take ownership of your
+    personal data and control what you share.
 
 -   :material-database: **[Data Lake](data-lake.md)** — browse and upload anonymised study datasets.
-
--   :material-wallet: **[Personal Data Wallet](personal-data-wallet.md)** — take ownership of your
-    personal data and control what you share.
 
 </div>
 

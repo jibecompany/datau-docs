@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="25 0 880 520" width="880" height="520" role="img" aria-labelledby="title desc">
+  <title id="title">DataU architecture</title>
+  <desc id="desc">Data Subject connects to DashboardU, which connects right to IdU, which connects up to the DataU CA. The Data Processor on the left contains a Front-End and a Back-End holding the ProxyU Client, which connects down to ProxyU. The DataU blockchain network of four NodeU nodes sits on the right; both DashboardU and ProxyU connect to NodeU 1.</desc>
+
+  <!-- Colours are self-contained so the diagram reads on both light and dark pages:
+       solid brand-blue boxes with white labels, mid-tone strokes for the groups. -->
+  <style>
+    .box   { fill: #1d6a8e; stroke: #14536e; stroke-width: 1.5; }
+    .label { fill: #ffffff; font-weight: 600; font-size: 15px; }
+    .group { fill: none; stroke: #7f9db0; stroke-width: 1.5; }
+    .netgroup { fill: none; stroke: #7f9db0; stroke-width: 1.5; stroke-dasharray: 6 4; }
+    .glabel { fill: #6b8fa5; font-weight: 600; font-size: 13px; text-anchor: start; }
+    .edge  { fill: none; stroke: #8fa8b8; stroke-width: 1.6; }
+    text   { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+             text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- ── edges (drawn first so boxes sit on top) ───────────────────────── -->
+  <!-- Data Subject -> DashboardU -> IdU -> DataU CA -->
+  <path class="edge" d="M170,112 L405,112"/>
+  <path class="edge" d="M545,112 L595,112"/>
+  <path class="edge" d="M635,90 L635,54"/>
+  <!-- Data Subject down into the Data Processor's Front-End -->
+  <path class="edge" d="M105,134 C 105,168 165,172 210,205"/>
+  <!-- Front-End to Back-End -->
+  <path class="edge" d="M210,249 L210,275"/>
+  <!-- ProxyU Client out of the Back-End, down to proxyU -->
+  <path class="edge" d="M210,354 C 210,420 215,430 215,460"/>
+  <!-- DashboardU into the network, routed below IdU -->
+  <path class="edge" d="M475,134 C 540,175 620,190 700,207"/>
+  <!-- ProxyU into the network, rising to NodeU 1 -->
+  <path class="edge" d="M285,482 C 540,500 650,460 668,300 C 676,240 668,207 700,207"/>
+  <!-- node chain -->
+  <path class="edge" d="M785,229 L785,250"/>
+  <path class="edge" d="M785,294 L785,315"/>
+  <path class="edge" d="M785,359 L785,380"/>
+
+  <!-- ── DataU CA, above IdU ──────────────────────────────────────────── -->
+  <rect class="box" x="580" y="10" width="110" height="44" rx="8"/>
+  <text class="label" x="635" y="32">DataU CA</text>
+
+  <!-- ── top row: Data Subject, DashboardU, IdU ───────────────────────── -->
+  <rect class="box" x="40"  y="90" width="130" height="44" rx="8"/>
+  <text class="label" x="105" y="112">Data Subject</text>
+
+  <rect class="box" x="405" y="90" width="140" height="44" rx="8"/>
+  <text class="label" x="475" y="112">DashboardU</text>
+
+  <rect class="box" x="595" y="90" width="80"  height="44" rx="8"/>
+  <text class="label" x="635" y="112">IdU</text>
+
+  <!-- ── left: Data Processor ─────────────────────────────────────────── -->
+  <rect class="group" x="40" y="165" width="360" height="250" rx="12"/>
+  <text class="glabel" x="58" y="186">Data Processor</text>
+
+  <rect class="box" x="105" y="205" width="210" height="44" rx="8"/>
+  <text class="label" x="210" y="227">Front-End</text>
+
+  <rect class="group" x="75" y="275" width="280" height="125" rx="12"/>
+  <text class="glabel" x="92" y="295">Back-End</text>
+
+  <rect class="box" x="105" y="310" width="210" height="44" rx="8"/>
+  <text class="label" x="210" y="332">ProxyU Client</text>
+
+  <!-- ProxyU, outside the processor's application -->
+  <rect class="box" x="145" y="460" width="140" height="44" rx="8"/>
+  <text class="label" x="215" y="482">ProxyU</text>
+
+  <!-- ── right: the blockchain network ────────────────────────────────── -->
+  <rect class="netgroup" x="680" y="158" width="210" height="286" rx="12"/>
+  <text class="glabel" x="697" y="176">DataU Blockchain Network</text>
+
+  <rect class="box" x="700" y="185" width="170" height="44" rx="8"/>
+  <text class="label" x="785" y="207">NodeU 1</text>
+
+  <rect class="box" x="700" y="250" width="170" height="44" rx="8"/>
+  <text class="label" x="785" y="272">NodeU 2</text>
+
+  <rect class="box" x="700" y="315" width="170" height="44" rx="8"/>
+  <text class="label" x="785" y="337">NodeU 3</text>
+
+  <rect class="box" x="700" y="380" width="170" height="44" rx="8"/>
+  <text class="label" x="785" y="402">NodeU 4</text>
+</svg>

@@ -20,7 +20,7 @@ analysis.
     Citizens who open the Questionnaire Tool from their account see only the questionnaires they have
     responded to. The view is **read-only** and shows no creation options.
 
-!!! note "Figure 2.2 — Questionnaire Tool (citizen view) showing no responded questionnaires yet"
+!!! note "Figure 2.1 — Questionnaire Tool (citizen view) showing no responded questionnaires yet"
     ![Questionnaire Tool, citizen view](../../assets/questionnaire-citizen.png)
 
 ## Managing questionnaires
@@ -38,7 +38,7 @@ The home page lists all questionnaires. Each card displays:
 - **Duplicate** — copy it as a new starting point
 - **Responses** — view all submissions and export as CSV
 
-!!! note "Figure 2.1 — Questionnaire Tool home (researcher) showing questionnaire cards with status, questions count and responses"
+!!! note "Figure 2.2 — Questionnaire Tool home (researcher) showing questionnaire cards with status, questions count and responses"
     ![Questionnaire Tool home, researcher](../../assets/questionnaire-home.png)
 
 ## Building a questionnaire
@@ -62,10 +62,10 @@ Question** button.
 
 - **Preview** — see the respondent view at any time
 - **Save** — save a draft without publishing
-- **Share** — publish the questionnaire and generate a shareable link for respondents
+- **Publish** — publish the questionnaire; to be able to publish the questionnaire all data types used in the questionnaire must be approved first (not in pending state)
+- **Share** — generate a shareable link for respondents
 
-Questions marked with **\*** are required. Status changes to **Published** once the questionnaire is
-shared.
+Questions marked with **\*** are required.
 
 !!! note "Figure 2.3 — Questionnaire Builder with title, description fields and Create a new Question button"
     ![Questionnaire Builder](../../assets/questionnaire-builder.png)

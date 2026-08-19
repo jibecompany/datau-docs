@@ -6,8 +6,10 @@ own integration.
 
 ## Prerequisites
 
-1. **Docker Desktop** installed and running — <https://www.docker.com/products/docker-desktop>.
-2. **Certificates**, placed in `src/main/resources/tls/`:
+1. **The demo application** — download
+   [`proxyu-java-client-dp-demo-app-1.1.0.zip`](java-client/index.md#downloads) and unzip it.
+2. **Docker Desktop** installed and running — <https://www.docker.com/products/docker-desktop>.
+3. **Certificates**, placed in `src/main/resources/tls/`:
     - `proxyu0.key` — your private key
     - `proxyu0.crt` — your certificate
     - `root.crt` — the DataU root certificate

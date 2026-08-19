@@ -1,4 +1,4 @@
-site_name: DataU
+site_name: DataU Docs
 site_description: User & developer documentation for the DataU platform and SPOON tools.
 site_url: https://cosminularu.github.io/public-docs/
 site_author: Jibe Company
@@ -44,7 +44,11 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
@@ -64,22 +68,24 @@ nav:
       - Overview: getting-started.md
       - User Guide (Data Subject):
           - DashboardU User Guide: data-subjects/dashboardu.md
+      - Developer Guide (Data Processor):
+          - data-processors/index.md
+          - ProxyU Java Client:
+              - data-processors/java-client/index.md
+              - Demo Application: data-processors/demo-app.md
+          - ProxyU Go Client: data-processors/go-client.md
+          - Didn't find your language?:
+              - data-processors/other-languages/index.md
+              - Integration Protocol: data-processors/proxyu-integration.md
+          - Troubleshooting: data-processors/troubleshooting.md
       - Connected Apps:
           - connected-apps/index.md
           - SPOON Project:
               - connected-apps/spoon/index.md
               - SPOON Dashboard: connected-apps/spoon/spoon-dashboard.md
               - Questionnaire Tool: connected-apps/spoon/questionnaire-tool.md
-              - Data Lake: connected-apps/spoon/data-lake.md
               - Personal Data Wallet: connected-apps/spoon/personal-data-wallet.md
-      - Developer Guide (Data Processor):
-          - data-processors/index.md
-          - ProxyU Client Guide:
-              - data-processors/proxyu-java-sdk/index.md
-              - Getting Started: data-processors/proxyu-java-sdk/getting-started.md
-              - SDK Capabilities: data-processors/proxyu-java-sdk/capabilities.md
-              - Demo Application: data-processors/proxyu-java-sdk/demo-app.md
-              - Troubleshooting: data-processors/proxyu-java-sdk/troubleshooting.md
+              - Data Lake: connected-apps/spoon/data-lake.md
 
 extra:
   social:

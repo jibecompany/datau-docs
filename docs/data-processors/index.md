@@ -1,14 +1,16 @@
-# Developers / Data Processors
+# ProxyU Client Guide
 
-This section is for **data processors** — developers building applications on top of DataU that need
+This section is for **Data Processors** — developers building applications on top of DataU that need
 to request and receive personal data from data subjects, with consent and full traceability.
 
-Your application never talks to citizens' data directly. Instead it integrates with **ProxyU**, the
-DataU integration bridge, and drives two core flows:
+Your application never talks to citizens' data directly. Instead, it integrates with **ProxyU**, the
+DataU integration bridge, using the **ProxyU Client**, to drive two core flows:
 
 1. **Correlation** — link your application to a data subject's DataU identity.
 2. **Permission** — request the subject's consent to access specific data, then receive that data
    through callbacks.
+
+![DataU architecture](../assets/datau-architecture.svg)
 
 ## Core concepts
 
@@ -19,12 +21,9 @@ DataU integration bridge, and drives two core flows:
   permission flows.
 - **Correlation message** — a token your app generates and the subject consumes (via QR code or a
   DashboardU link) to establish the link between you and them.
-- **Permission message** — a token that encodes a request for specific data, a process type
-  (`BULK` or `INDIVIDUAL`), and the Terms & Conditions document the subject consents to.
+- **Permission message** — a token that encodes a permission request for specific data.
 
 ## The correlation → permission flow
-
-![Correlation & permission flows](../assets/correlation-permission.png)
 
 At a high level:
 
@@ -32,21 +31,40 @@ At a high level:
    link).
 2. The subject consumes it in DashboardU; your app receives their **public key** via a callback.
 3. Your app creates a **permission message** for a specific data field and shows it to the subject.
-4. The subject approves in DashboardU; your app receives the **granted status** and the data via
+4. The subject approves in DashboardU; your app receives the **granted status** and the **data** via
    callbacks.
 
 ## Get started
 
+Pick the client that matches your stack.
+
 <div class="grid cards" markdown>
 
--   :material-language-java: **[ProxyU Java SDK](proxyu-java-sdk/index.md)**
+-   :material-language-java: **[ProxyU Java Client](java-client/index.md)**
 
     ---
 
-    The recommended path for JVM applications. Integrate the SDK as a library, or deploy the
-    ready-made demo microservice.
+    The available client library. Add the SDK as a Maven dependency and wire it into your own JVM
+    application.
 
-    [:octicons-arrow-right-24: Read the SDK guide](proxyu-java-sdk/index.md)
+    [:octicons-arrow-right-24: Java client guide](java-client/index.md)
+
+-   :material-language-go: **[ProxyU Go Client](go-client.md)**
+
+    ---
+
+    Under construction — not released yet.
+
+    [:octicons-arrow-right-24: Status](go-client.md)
+
+-   :material-help-circle: **[Didn't find your language?](other-languages/index.md)**
+
+    ---
+
+    Run the Java application as a microservice, or generate your own gRPC client from
+    `proxyu.proto`.
+
+    [:octicons-arrow-right-24: Other languages](other-languages/index.md)
 
 </div>
 

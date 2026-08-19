@@ -51,8 +51,7 @@ additional information.
 
 ## User profile & account
 
-Your profile is shown at the bottom-left of the sidebar, displaying your name, email address, and an
-initials avatar. Click the **⋯** menu next to your name for account options including logout.
+Your profile is shown at the bottom-left of the sidebar, displaying your **name**, **email address**, and an
+**initials' avatar**. Click the **⋯** menu next to your name for account options including **logout**.
 
-All SPOON tools share a single sign-on session managed by DataU at `auth.datau.jibe.cloud` using
-OpenID Connect (OIDC).
+All SPOON tools share a **single sign-on** session managed by DataU using OpenID Connect (OIDC).
