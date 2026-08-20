@@ -51,4 +51,4 @@ It runs on push to `main` and can also be triggered manually from the Actions ta
 mkdocs gh-deploy --clean   # builds and pushes to the gh-pages branch
 ```
 
-The published site URL is `https://cosminularu.github.io/public-docs/` (see `site_url` in `mkdocs.yml`).
+The published site URL is `https://jibecompany.github.io/datau-docs/` (see `site_url` in `mkdocs.yml`).

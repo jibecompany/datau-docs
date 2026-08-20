@@ -1,6 +1,6 @@
 site_name: DataU Docs
-site_description: User & developer documentation for the DataU platform and SPOON tools.
-site_url: https://cosminu12.github.io/public-docs/
+site_description: User & Developer documentation for the DataU platform.
+site_url: https://jibecompany.github.io/datau-docs/
 site_author: Jibe Company
 
 theme:
@@ -87,9 +87,9 @@ nav:
               - Personal Data Wallet: connected-apps/spoon/personal-data-wallet.md
               - Data Lake: connected-apps/spoon/data-lake.md
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/CosminUlaru/public-docs
+#extra:
+#  social:
+#    - icon: fontawesome/brands/github
+#      link: https://github.com/jibecompany/datau-docs
 
 copyright: © Jibe Company BV
