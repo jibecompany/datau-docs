@@ -46,7 +46,7 @@ Integrate the SDK directly into your own application.
     ```
 
 4. Implement the **`ProxyUClientStorage`** interface — provide your own custom DB implementation.
-5. Implement the **`ProxyUClientCallbacks`** interface — provide behaviour for handling received data.
+5. Implement the **`ProxyUClientCallbacks`** interface — provide behaviour for handling the received data.
 6. Import **`ProxyUClientConfiguration`** in your configuration file and define the
    `proxyUClientStorage`, `proxyUClientCallbacks`, and `proxyUClient` beans:
 
@@ -85,9 +85,6 @@ Then use the client to drive the flows — see [SDK capabilities](#sdk-capabilit
 [Demo Application](../demo-app.md) shows all of these integration steps in a working example.
 
 ## SDK capabilities
-
-This is a summary of the SDK's capabilities. For full details, consult the SDK's Java documentation
-(Javadoc).
 
 !!! warning "Respect parameter sizes"
     Make sure you respect the size limits of each parameter when calling the methods below. You can
@@ -166,7 +163,7 @@ If you want you can redirect the user back to your app after they did the correl
 
 ### Document submission
 
-Submit a **Terms & Conditions** document for the Data Subject to see when giving consent.
+Submit a document with your **Terms & Conditions** for the permission request. The Data Subject will be able to consult this document when giving consent.
 
 Use `proxyUClient#submitDocument` with a `LegalPolicyDocument` object containing:
 
@@ -208,18 +205,45 @@ sequenceDiagram
 
 Use `proxyUClient#createPermissionRequestMessage` to create a permission message. Its parameters:
 
-| Parameter | How to build it                                                                                                                                                                                                |
-| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **subject** | The public key received in `ClientCallbacks#onPublicKeyReceived` after `/correlation`.                                                                                                                         |
-| **data** | Use `DataIdentificationGraphHelper#getNodeUUID` TOUPDATE to get the UUID of a data field or a group of DATA fields. Look through the SDK's `didgraph.yaml` and use the description of the node that suits you. |
-| **process** | Use `DataIdentificationGraphHelper#getProcessUUID` with `BULK` or `INDIVIDUAL` (see below).                                                                                                                    |
-| **policy** | The SHA3-256 file hash (Hex) of the Terms & Conditions document.                                                                                                                                               |
-| **reason** | Optional — you can send a random UUID.                                                                                                                                                                         |
-| **rewardPoints** | Points awarded to the subject on granting access. Set to `0` to skip rewards.                                                                                                                                  |
+| Parameter | How to build it                                                                                                                          |
+| --- |------------------------------------------------------------------------------------------------------------------------------------------|
+| **subject** | The ID of the Data Subject - public key received in `ClientCallbacks#onPublicKeyReceived` after the `correlation` flow is completed.     |
+| **data** | The ID of the data type to request from the Data Subject - One of the UUIDs present in the Data Identification Graph. See details below. |
+| **process** | Use `DataIdentificationGraphHelper#getProcessUUID` with `BULK` or `INDIVIDUAL` (see below).                                              |
+| **policy** | The SHA3-256 file hash (Hex) of the Terms & Conditions document.                                                                         |
+| **reason** | Optional — you can send a random UUID.                                                                                                   |
+| **rewardPoints** | Number of points awarded to the Data Subject on granting consent. Set to `0` to skip rewards.                                            |
 
-!!! warning "Validate the node UUID"
-    Check whether the result of `getNodeUUID` is `null` — that means the data field/group name is
-    invalid or does not exist in DataU.
+!!! tip "Getting the Data ID"
+
+    The Data Identification Graph supports multiple data types, split in 2 categories:  
+    Simple data types:  
+
+    - **text/plain; charset=UTF-8**
+    
+    Composite data types:  
+
+    - **application/datau+node**
+
+    **A)** If you don't need to set a different data ID for each permission request, you can look at the Data Identification   
+    Graph once by calling `TODO Dashboard didgraph link`, pick one of the IDs that suits you and use it directly in the permission message: 
+    
+    ``` ByteString data = ProxyUClientUtils.UUIDStringToByteString("0ee84dd4-90fe-4491-9943-733137753bed");
+        ...
+        demoService.createPermissionRequestMessage(
+              subject, data,...
+        );
+    ```
+    
+    **B)** 
+      Otherwise, if you need to set the data ID dynamically based on your needs, you can use
+      `ProxyUClient#getDataIdentificationGraphRootNodes()` 
+        to retrieve the current data types from the Data Identification Graph.
+      Then use `proxyUClient.traverseAndGetAllDataNodes(dataIDGraphRootNodes);`  
+        and filter the nodes based on your needs by  
+      ```Proxyu.DataIDGraphNode#getKey()
+        Proxyu.DataIDGraphNode#getMime()
+      ```
 
 **Process types:**
 
