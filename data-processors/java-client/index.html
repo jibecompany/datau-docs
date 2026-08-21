@@ -1181,7 +1181,7 @@ callbacks — all over a secure gRPC + mTLS channel to a ProxyU instance.</p>
 <li>
 <p>Implement the <strong><code>ProxyUClientStorage</code></strong> interface — provide your own custom DB implementation.</p>
 </li>
-<li>Implement the <strong><code>ProxyUClientCallbacks</code></strong> interface — provide behaviour for handling received data.</li>
+<li>Implement the <strong><code>ProxyUClientCallbacks</code></strong> interface — provide behaviour for handling the received data.</li>
 <li>
 <p>Import <strong><code>ProxyUClientConfiguration</code></strong> in your configuration file and define the
    <code>proxyUClientStorage</code>, <code>proxyUClientCallbacks</code>, and <code>proxyUClient</code> beans:</p>
@@ -1218,8 +1218,6 @@ callbacks — all over a secure gRPC + mTLS channel to a ProxyU instance.</p>
 <p>Then use the client to drive the flows — see <a href="#sdk-capabilities">SDK capabilities</a>. The
 <a href="../demo-app/">Demo Application</a> shows all of these integration steps in a working example.</p>
 <h2 id="sdk-capabilities">SDK capabilities<a class="headerlink" href="#sdk-capabilities" title="Permanent link">&para;</a></h2>
-<p>This is a summary of the SDK's capabilities. For full details, consult the SDK's Java documentation
-(Javadoc).</p>
 <div class="admonition warning">
 <p class="admonition-title">Respect parameter sizes</p>
 <p>Make sure you respect the size limits of each parameter when calling the methods below. You can
@@ -1286,7 +1284,7 @@ Processor (you) and the Data Subject will take place and you will receive the re
 <p>The <code>redirect_uri</code> value <strong>MUST be URL-encoded</strong>. By default, the user is redirected in the same tab; add <code>&amp;target=_blank</code> to open the URI in a new tab.</p>
 </div>
 <h3 id="document-submission">Document submission<a class="headerlink" href="#document-submission" title="Permanent link">&para;</a></h3>
-<p>Submit a <strong>Terms &amp; Conditions</strong> document for the Data Subject to see when giving consent.</p>
+<p>Submit a document with your <strong>Terms &amp; Conditions</strong> for the permission request. The Data Subject will be able to consult this document when giving consent.</p>
 <p>Use <code>proxyUClient#submitDocument</code> with a <code>LegalPolicyDocument</code> object containing:</p>
 <ul>
 <li>The <strong>URL</strong> where the document is stored. This must be a public URL (like a CDN or served by your app).</li>
@@ -1331,11 +1329,11 @@ SHA3-256 hash in Hex would be
 <tbody>
 <tr>
 <td><strong>subject</strong></td>
-<td>The public key received in <code>ClientCallbacks#onPublicKeyReceived</code> after <code>/correlation</code>.</td>
+<td>The ID of the Data Subject - public key received in <code>ClientCallbacks#onPublicKeyReceived</code> after the <code>correlation</code> flow is completed.</td>
 </tr>
 <tr>
 <td><strong>data</strong></td>
-<td>Use <code>DataIdentificationGraphHelper#getNodeUUID</code> TOUPDATE to get the UUID of a data field or a group of DATA fields. Look through the SDK's <code>didgraph.yaml</code> and use the description of the node that suits you.</td>
+<td>The ID of the data type to request from the Data Subject - One of the UUIDs present in the Data Identification Graph. See details below.</td>
 </tr>
 <tr>
 <td><strong>process</strong></td>
@@ -1351,14 +1349,36 @@ SHA3-256 hash in Hex would be
 </tr>
 <tr>
 <td><strong>rewardPoints</strong></td>
-<td>Points awarded to the subject on granting access. Set to <code>0</code> to skip rewards.</td>
+<td>Number of points awarded to the Data Subject on granting consent. Set to <code>0</code> to skip rewards.</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Validate the node UUID</p>
-<p>Check whether the result of <code>getNodeUUID</code> is <code>null</code> — that means the data field/group name is
-invalid or does not exist in DataU.</p>
+<div class="admonition tip">
+<p class="admonition-title">Getting the Data ID</p>
+<p>The Data Identification Graph supports multiple data types, split in 2 categories:<br />
+Simple data types:  </p>
+<ul>
+<li><strong>text/plain; charset=UTF-8</strong></li>
+</ul>
+<p>Composite data types:  </p>
+<ul>
+<li><strong>application/datau+node</strong></li>
+</ul>
+<p><strong>A)</strong> If you don't need to set a different data ID for each permission request, you can look at the Data Identification <br />
+Graph once by calling <code>TODO Dashboard didgraph link</code>, pick one of the IDs that suits you and use it directly in the permission message: </p>
+<p><code>ByteString data = ProxyUClientUtils.UUIDStringToByteString("0ee84dd4-90fe-4491-9943-733137753bed");
+    ...
+    demoService.createPermissionRequestMessage(
+          subject, data,...
+    );</code></p>
+<p><strong>B)</strong> 
+  Otherwise, if you need to set the data ID dynamically based on your needs, you can use
+  <code>ProxyUClient#getDataIdentificationGraphRootNodes()</code> 
+    to retrieve the current data types from the Data Identification Graph.
+  Then use <code>proxyUClient.traverseAndGetAllDataNodes(dataIDGraphRootNodes);</code><br />
+    and filter the nodes based on your needs by<br />
+<code>Proxyu.DataIDGraphNode#getKey()
+    Proxyu.DataIDGraphNode#getMime()</code></p>
 </div>
 <p><strong>Process types:</strong></p>
 <ul>
