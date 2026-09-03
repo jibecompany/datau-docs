@@ -48,7 +48,8 @@ It runs on push to `main` and can also be triggered manually from the Actions ta
 **Option B — one-shot from your machine.**
 
 ```bash
-mkdocs gh-deploy --clean   # builds and pushes to the gh-pages branch
+source .venv/bin/activate 
+mkdocs gh-deploy --strict   # builds and pushes to the gh-pages branch
 ```
 
 The published site URL is `https://jibecompany.github.io/datau-docs/` (see `site_url` in `mkdocs.yml`).

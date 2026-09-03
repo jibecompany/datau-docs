@@ -2,20 +2,20 @@
 
 **DashboardU** is the DataU Dashboard where you can control and monitor how your data is shared.
 
-## Registering a new account
+## Sign up - Registering a new account
 
-1. Go to [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud), click **Log in**.
-2. Click "Register"
+1. Go to [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud), click **Sign in**.
+2. Click **Register**
 3. Complete the registration form.
 4. Verify your email address.
-5. Log in with your new credentials.
+5. Sign in with your new credentials.
 
-## Logging in
+## Sign in
 
-1. Go to [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud), click **Log in**.
-2. You are redirected to the DataU Login page`.
+1. Go to [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud), click **Sign in**.
+2. You are redirected to the DataU Sign in page.
 3. Enter your credentials and click **Sign in**.
-4. You can now start sharing data with DataU connected applications.
+4. You can now start sharing data with any DataU-connected applications.
 
 ## My Data
 
@@ -23,8 +23,10 @@ Shows all applications you have shared data with. Use the **Search application**
 Each entry shows *what* data was shared. It displays **"No data"** when no sharing has
 occurred yet.
 
-!!! note "My Data view showing 3 applications where data was shared"
-    ![My Data view showing no shared data yet](../assets/dashboardu-my-data.png)
+!!! note "My Data view"
+    ![My Data view web](../assets/dashboardu-my-data.png){ width="65%" }
+    ![My Data view mobile](../assets/dashboardu-my-data-mobile.png){ width="33%" }
+    { .dx-pair-row }
 
 ## My Settings
 
@@ -33,12 +35,14 @@ occurred yet.
 - **Help** — access support documentation.
 - **Log out** — sign out of DataU.
 
-!!! note "My Settings with language, terms, help and logout options"
-    ![My Settings with language, terms, help and logout options](../assets/dashboardu-my-settings.png)
+!!! note "My Settings view"
+    ![My Settings web](../assets/dashboardu-my-settings.png){ width="65%" }
+    ![My Settings mobile](../assets/dashboardu-my-settings-mobile.png){ width="33%" }
+    { .dx-pair-row }
 
 ## Starting to Share Data
 
-To start sharing data, scan the QR code or follow the consent instructions found in **DataU-connected application**.
+To start sharing data, scan the QR code or follow the consent instructions found in a DataU-connected application.
 
 !!! tip "Step 1: Correlation"
     When a connected app asks to correlate (link) with you, you'll
@@ -50,7 +54,7 @@ To start sharing data, scan the QR code or follow the consent instructions found
 
 ![Data Processor App showing correlation link](../assets/dp-correlation-link.png)
 
-![DashboardU decoding the correlation request](../assets/dashboardu-correlation.png)
+![DashboardU decoding the correlation request](../assets/dashboardu-correlation.png){ width="95%" }
 
 </div>
 

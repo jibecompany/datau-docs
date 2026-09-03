@@ -296,3 +296,27 @@
     text-align: center;
   }
 }
+
+/* =============================================================
+   Content utilities (Markdown pages, not the landing page)
+   ============================================================= */
+
+/* ---- Screenshot pairs --------------------------------------- */
+/* Two screenshots side by side, e.g. a web view next to a mobile one: the
+   first sits flush left, the second flush right against the content edge.
+   Tag the paragraph (not the images) with attr_list, and set each width so
+   their rendered heights match:
+
+     ![web](x.png){ width="60%" }
+     ![mobile](y.png){ width="30%" }
+     { .dx-pair-row }
+
+   Widths stay per-image because they depend on each screenshot's aspect
+   ratio; the space between them is whatever is left over. */
+.md-typeset .dx-pair-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2%;
+}

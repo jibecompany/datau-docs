@@ -16,14 +16,12 @@ callbacks — all over a secure gRPC + mTLS channel to a ProxyU instance.
 
 ## Downloads
 
-<!-- TODO: replace the two 'download link pending' cells with the 2.0.0 Drive links. -->
-
 The current release is **2.0.0**.
 
 | Package | File | |
 | --- | --- | --- |
-| **Java Client SDK** | `proxyu-java-client-SDK-2.0.0.zip` | _download link pending_ |
-| **Demo application** | `proxyu-java-client-dp-demo-app-2.0.0.zip` | _download link pending_ |
+| **Java Client SDK** | `proxyu-java-client-SDK-2.0.0.zip` | [:octicons-download-24: Download](https://drive.google.com/file/d/1IZ4fs0QJ6CasheCV1fpraXRzZQC0O7Cw/view?usp=sharing) |
+| **Demo application** | `proxyu-java-client-dp-demo-app-2.0.0.zip` | [:octicons-download-24: Download](https://drive.google.com/file/d/1tvhUEgBUw5o6OEDu7Ty5wMgHjd9DQoUn/view?usp=sharing) |
 
 ## Integrate the SDK as a library
 
