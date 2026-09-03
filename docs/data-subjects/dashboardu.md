@@ -1,42 +1,32 @@
 # DashboardU User Guide
 
-**DashboardU** (the DataU Dashboard) at [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud)
-is your control centre for monitoring how your data is shared. It is powered by **DataU**, the
-data-sovereignty layer that handles identity, authentication, consent, and data governance for every
-connected tool.
+**DashboardU** is the DataU Dashboard where you can control and monitor how your data is shared.
 
-## Authentication & single sign-on
+## Registering a new account
 
-DataU uses **Keycloak** at `auth.datau.jibe.cloud` with **OpenID Connect (OIDC)** to provide secure
-single sign-on across all tools. You log in once and move freely between tools without re-entering
-your credentials.
+1. Go to [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud), click **Log in**.
+2. Click "Register"
+3. Complete the registration form.
+4. Verify your email address.
+5. Log in with your new credentials.
 
-### Logging in
+## Logging in
 
-1. Click **Continue with DataU** or **Log in** on any connected tool.
-2. You are redirected to `auth.datau.jibe.cloud`.
-3. Enter your credentials and sign in.
-4. You are redirected back — now authenticated across all tools simultaneously.
+1. Go to [dashboardu.datau.jibe.cloud](https://dashboardu.datau.jibe.cloud), click **Log in**.
+2. You are redirected to the DataU Login page`.
+3. Enter your credentials and click **Sign in**.
+4. You can now start sharing data with DataU connected applications.
 
-### Registering a new account
+## My Data
 
-1. On any DataU app's landing page, click **Register**.
-2. Complete the DataU registration form.
-3. Verify your email address.
-4. Log in with your new credentials.
-
-### DashboardU has two sections in the bottom navigation bar.
-
-#### My Data
-
-Shows all organisations you have shared data with. Use the **Search organisation** field to filter.
-Each entry shows *what* data was shared and *when*. It displays **"No data"** when no sharing has
+Shows all applications you have shared data with. Use the **Search application** field to filter.
+Each entry shows *what* data was shared. It displays **"No data"** when no sharing has
 occurred yet.
 
 !!! note "My Data view showing 3 applications where data was shared"
     ![My Data view showing no shared data yet](../assets/dashboardu-my-data.png)
 
-#### My Settings
+## My Settings
 
 - **Language** — change the display language.
 - **Terms and conditions** — view the platform T&Cs.
@@ -46,22 +36,9 @@ occurred yet.
 !!! note "My Settings with language, terms, help and logout options"
     ![My Settings with language, terms, help and logout options](../assets/dashboardu-my-settings.png)
 
-## Roles & permissions
+## Starting to Share Data
 
-Your DataU account determines which tools you can access.
-
-=== "Citizen / User"
-
-    - Create and manage personal data items across all categories.
-    - Control consent for each data item before sharing.
-    - Monitor what data has been shared with which organisations via DashboardU.
-
-=== "Researcher / Admin"
-
-    - Create, publish, and analyse data-collection instruments.
-    - Upload and browse study datasets.
-
-## Sharing Data
+To start sharing data, scan the QR code or follow the consent instructions found in **DataU-connected application**.
 
 !!! tip "Step 1: Correlation"
     When a connected app asks to correlate (link) with you, you'll
@@ -95,7 +72,6 @@ Your DataU account determines which tools you can access.
 DataU is built on a data-sovereignty model — you are an active participant who decides how your data
 is used:
 
-- **Consent-based collection** — data is shared only with your explicit consent, given when you save
-  each item.
+- **Consent-based collection** — data is shared only with your explicit consent when you approve a request.
 - **GDPR compliance** — the platform is designed to meet EU data-protection regulations and
   European data-governance standards.

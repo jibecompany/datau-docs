@@ -1,6 +1,16 @@
 syntax = "proto3";
 
-option go_package = "github.com/jibecompany/proxyu/protocol";
+// This file deliberately declares no language package option, so generated code lands in a
+// neutral package derived from `package protocol;` below. Add the option for your language if
+// you want your own namespace:
+//
+//   Java    option java_package = "com.yourcompany.proxyu.protocol";
+//   Go      option go_package = "github.com/yourcompany/proxyu/protocol";   // protoc-gen-go requires this
+//   C#      option csharp_namespace = "YourCompany.ProxyU.Protocol";
+//   PHP     option php_namespace = "YourCompany\\ProxyU\\Protocol";
+//
+// Python, Ruby and JavaScript take no package option. Option names are fixed by protobuf and
+// validated by protoc, so only the documented FileOptions names are accepted.
 package protocol;
 
 service ProxyUIntegration {
@@ -46,6 +56,7 @@ message PermissionRequest {
     uint64 until = 7; // Unix UTC timestamp
     uint32 amount = 8;
     uint32 level = 9;
+    uint32 reward_points = 10;
 }
 
 message PermissionResponse {

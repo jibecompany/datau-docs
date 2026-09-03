@@ -73,6 +73,9 @@ nav:
           - ProxyU Java Client:
               - data-processors/java-client/index.md
               - Demo Application: data-processors/demo-app.md
+              # Archived SDK releases — newest first. See CLAUDE.md "Versioning the Java client docs".
+              - Previous versions:
+                  - "SDK 1.1.0": data-processors/java-client/v1.1.0.md
           - ProxyU Go Client: data-processors/go-client.md
           - Didn't find your language?:
               - data-processors/other-languages/index.md

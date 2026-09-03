@@ -48,6 +48,13 @@ preferred language) that interacts with the ProxyU server.
     - **PHP** → <https://grpc.io/docs/languages/php/basics/#protoc>
     - **.NET** → <https://learn.microsoft.com/en-us/aspnet/core/grpc/basics#add-a-proto-file-to-a-c-app>
     - **Other languages** → <https://grpc.io/docs/languages/>
+
+    !!! tip "Pick your own package namespace"
+        `proxyu.proto` declares no language package option, so generated code lands in a neutral
+        `protocol` package. Add the option for your language — e.g.
+        `option java_package = "com.yourcompany.proxyu.protocol";` — to put it in your own
+        namespace. The file's header comment lists the option name per language; Python, Ruby and
+        JavaScript need none.
 2. Implement the five RPCs of the `ProxyUIntegration` service — `Correlation`, `SubmitDocument`,
    `Permission`, `Data`, and `GetDataIdentificationGraph`. The
    [Integration Protocol Specification](../proxyu-integration.md#integration-api) documents the message

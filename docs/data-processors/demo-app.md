@@ -6,8 +6,10 @@ own integration.
 
 ## Prerequisites
 
-1. **The demo application** — download
-   [`proxyu-java-client-dp-demo-app-1.1.0.zip`](java-client/index.md#downloads) and unzip it.
+1. **The demo application** — download the demo application zip from
+   [Downloads](java-client/index.md#downloads) and unzip it. It tracks the SDK version, so use the
+   zip matching your SDK; earlier releases are listed under
+   [previous versions](java-client/index.md#previous-versions).
 2. **Docker Desktop** installed and running — <https://www.docker.com/products/docker-desktop>.
 3. **Certificates**, placed in `src/main/resources/tls/`:
     - `proxyu0.key` — your private key

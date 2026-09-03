@@ -61,5 +61,23 @@ in the browser (the build itself stays offline). Screenshots remain PNGs in `doc
 admonitions, and `===` tabbed blocks (`pymdownx.tabbed`) for alternative integration approaches.
 Images go in `docs/assets/`.
 
+**Versioning the Java client docs.** Only the ProxyU Java Client SDK is versioned, and it is
+versioned per page inside this single build — not with `mike`, which would stamp an SDK version onto
+the unrelated DashboardU and Connected Apps docs.
+
+- `docs/data-processors/java-client/index.md` always documents the **latest** SDK, so its URL
+  (`/data-processors/java-client/`) is the stable link to give out. It opens with an
+  `!!! info "SDK <version> — latest"` banner and ends with a `## Previous versions` table.
+- Each superseded release is frozen as a sibling `v<version>.md` in the same directory, with a
+  `title:` front matter, an H1 of `ProxyU Java Client <version>`, and an
+  `!!! warning "Archived documentation — SDK <version>"` banner linking back to `index.md`.
+- To cut a new release: `cp index.md v<old>.md`, add the archive front matter/H1/banner to the copy
+  and change its Downloads line to "This page documents release **<old>**."; then in `index.md` bump
+  the banner, the "current release is" line, the zip filenames, the `~/.m2/...` path, the download
+  links, and add a row to the `## Previous versions` table; finally add the new page to the
+  `Previous versions` group in `mkdocs.yml` (newest first).
+- `docs/data-processors/demo-app.md` is deliberately version-agnostic — it links to the Downloads
+  section instead of naming a zip, so it needs no edit on a version bump.
+
 Note: the "Project layout" tree in `README.md` lists a `data-subjects/connected-apps/spoon/`
 directory that does not exist yet — trust `mkdocs.yml` and the filesystem over that tree.
