@@ -522,6 +522,8 @@
       
         
       
+        
+      
     
     
       
@@ -579,6 +581,77 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2_3" id="__nav_2_3_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Previous versions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Previous versions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-client/v1.1.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SDK 1.1.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1060,13 +1133,23 @@ preferred language) that interacts with the ProxyU server.</p>
 </ul>
 </div>
 <ol>
-<li>Use <a href="../proxyu.proto"><code>proxyu.proto</code></a> to generate a gRPC client for your language:<ul>
+<li>
+<p>Use <a href="../proxyu.proto"><code>proxyu.proto</code></a> to generate a gRPC client for your language:</p>
+<ul>
 <li><strong>Node</strong> → <a href="https://grpc.io/docs/languages/node/basics/#loading-service-descriptors-from-proto-files">https://grpc.io/docs/languages/node/basics/#loading-service-descriptors-from-proto-files</a></li>
 <li><strong>PHP</strong> → <a href="https://grpc.io/docs/languages/php/basics/#protoc">https://grpc.io/docs/languages/php/basics/#protoc</a></li>
 <li><strong>.NET</strong> → <a href="https://learn.microsoft.com/en-us/aspnet/core/grpc/basics#add-a-proto-file-to-a-c-app">https://learn.microsoft.com/en-us/aspnet/core/grpc/basics#add-a-proto-file-to-a-c-app</a></li>
 <li><strong>Other languages</strong> → <a href="https://grpc.io/docs/languages/">https://grpc.io/docs/languages/</a></li>
 </ul>
-</li>
+<div class="admonition tip">
+<p class="admonition-title">Pick your own package namespace</p>
+<p><code>proxyu.proto</code> declares no language package option, so generated code lands in a neutral
+<code>protocol</code> package. Add the option for your language — e.g.
+<code>option java_package = "com.yourcompany.proxyu.protocol";</code> — to put it in your own
+namespace. The file's header comment lists the option name per language; Python, Ruby and
+JavaScript need none.</p>
+</div>
+<ol>
 <li>Implement the five RPCs of the <code>ProxyUIntegration</code> service — <code>Correlation</code>, <code>SubmitDocument</code>,
    <code>Permission</code>, <code>Data</code>, and <code>GetDataIdentificationGraph</code>. The
    <a href="../proxyu-integration/#integration-api">Integration Protocol Specification</a> documents the message
@@ -1077,6 +1160,8 @@ preferred language) that interacts with the ProxyU server.</p>
    <code>ProxyUClientConfiguration</code> and <code>ProxyUClient</code> classes.</li>
 <li>Use the connection details and certificates for your ProxyU instance to test it and confirm you
    can generate a correlation message.</li>
+</ol>
+</li>
 </ol>
 <div class="admonition question">
 <p class="admonition-title">Need access?</p>
