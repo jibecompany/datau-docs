@@ -1,7 +1,7 @@
 # DashboardU User Guide
 
 **DashboardU** is the DataU Dashboard where you can control and monitor how your data is shared.   
-## **_Available on Mobile & Web._**
+## **_Available on Mobile & Web_**
 
 To install it on a mobile device follow these steps:
 
