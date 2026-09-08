@@ -298,25 +298,55 @@
 }
 
 /* =============================================================
+   Layout
+   ============================================================= */
+
+/* Material caps the content grid at 61rem, which leaves a narrow column
+   between the nav sidebar and the table of contents. Widened so wide
+   figures (see device frames below) can sit side by side. Applies to the
+   header and tabs too, so everything stays aligned. */
+.md-grid {
+  max-width: 78rem;
+}
+
+/* =============================================================
    Content utilities (Markdown pages, not the landing page)
    ============================================================= */
 
-/* ---- Screenshot pairs --------------------------------------- */
-/* Two screenshots side by side, e.g. a web view next to a mobile one: the
-   first sits flush left, the second flush right against the content edge.
-   Tag the paragraph (not the images) with attr_list, and set each width so
-   their rendered heights match:
+/* ---- Shrink-wrapped admonitions ----------------------------- */
+/* An admonition is a block, so it spans the full content width even when it
+   holds only a small image, leaving dead space to its right. This makes the
+   box wrap its content instead. Add the class with the extra-word form of the
+   classic syntax (any words between the type and the title become classes):
 
-     ![web](x.png){ width="60%" }
-     ![mobile](y.png){ width="30%" }
+     !!! note dx-fit "Scan the QR code with your phone"
+         ![QR](../assets/datau-prod-qr.png){ width="260" }
+
+   Give the image an absolute width, not a percentage — a percentage would have
+   to resolve against a container whose own width depends on the image. */
+.md-typeset .admonition.dx-fit,
+.md-typeset details.dx-fit {
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* ---- Screenshot pairs --------------------------------------- */
+/* Two screenshots side by side: the first flush left, the second flush
+   right against the content edge. Tag the paragraph (not the images):
+
+     ![web](x.png){ width="75%" }
+     ![mobile](y.png){ width="23%" }
      { .dx-pair-row }
 
    Widths stay per-image because they depend on each screenshot's aspect
-   ratio; the space between them is whatever is left over. */
+   ratio; the space between them is whatever is left over, so widening an
+   image both enlarges it and closes the gap. Keep the total under 100% less
+   the gap. Bottoms are aligned, so unequal heights still sit on one line. */
 .md-typeset .dx-pair-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 2%;
+  gap: 1%;
 }
+
